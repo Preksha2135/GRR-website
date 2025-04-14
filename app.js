@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('home');
 });
 
 app.get('/about', (req, res) => {
@@ -20,6 +20,14 @@ app.get('/about', (req, res) => {
 
 app.get('/customer-corner', (req, res) => {
     res.render('customer-corner');
+});
+
+app.get('/gallery', (req, res) => {
+    res.render('gallery');
+});
+
+app.get('/quality', (req, res) => {
+    res.render('quality');
 });
 
 app.listen(port, () => {
